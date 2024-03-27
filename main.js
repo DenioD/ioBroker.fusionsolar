@@ -469,7 +469,7 @@ class FusionSolarConnector extends utils.Adapter {
             if(deviceRealtimeKpiData) {
 
                 const deviceRealtimeKpiFolder = deviceFolder + '.kpi.realtime';
-                if(deviceInfo.devTypeId == 1){
+                if(deviceInfo.devTypeId == 1 || deviceInfo.devTypeId == 38){
                     //Inverter
 
                     await this.writeChannelDataToIoBroker(deviceRealtimeKpiFolder, 'openTime', deviceRealtimeKpiData.open_time, 'mixed', 'indicator',  createObjectsInitally);
